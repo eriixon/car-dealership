@@ -1,0 +1,36 @@
+<form [formGroup]="carForm" class="car-form" (ngSubmit)="onLookup()">
+  <div class="form-check form-check-inline col-md-3">
+    <label class="form-check-label col-md-3" for="color">Color</label>
+    <select class="form-control" formControlName="color">
+      <option value="">Any</option>
+      <option [value]="color" *ngFor="let color of COLORS"> {{color}}</option>
+    </select>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" formControlName="hasSunroof">
+    <label class="form-check-label" for="defaultCheck2">Sun roof</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" formControlName="isFourWheelDrive">
+    <label class="form-check-label" for="defaultCheck3">4WD</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" formControlName="hasLowMiles">
+    <label class="form-check-label" for="inlineCheckbox4">Low Miles</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" formControlName="hasPowerWindows">
+    <label class="form-check-label" for="inlineCheckbox5">Power windows</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" formControlName="hasNavigation">
+    <label class="form-check-label" for="inlineCheckbox6">Navigation</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" formControlName="hasHeatedSeats">
+    <label class="form-check-label" for="inlineCheckbox7">Heated seats</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <button type="submit" class="btn btn-primary mb-2">LOOKUP</button>
+  </div>
+</form>

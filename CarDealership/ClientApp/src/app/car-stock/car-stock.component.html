@@ -1,0 +1,6 @@
+<div class="cars">
+    <app-search-form (result)="searchCars($event)"></app-search-form>
+    <div class="card-deck">
+        <app-car *ngFor=" let car of carList; trackBy: trackByFn;" [car]="car"></app-car>
+    </div>
+</div>

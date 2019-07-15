@@ -1,0 +1,18 @@
+  <div class="card border border-primary">
+    <img class="card-img-top" [src]="CAR_IMG" alt="Car image">
+    <div class="card-body">
+      <h5 class="card-title">Car Info</h5>
+      <p class="card-text">Make : {{car.make}}</p>
+      <p class="card-text">Year : {{car.year}}</p>
+      <p class="card-text">Color : {{car.color}}</p>
+      <p class="card-text">Sunroof : {{car.hasSunroof == true ? "Yes" : "No"}}</p>
+      <p class="card-text">4WD : {{car.isFourWheelDrive == true ? "Yes" : "No"}}</p>
+      <p class="card-text">Low Mile : {{car.hasLowMiles == true ? "Yes" : "No"}}</p>
+      <p class="card-text">Power windows : {{car.hasPowerWindows == true ? "Yes" : "No"}}</p>
+      <p class="card-text">Navigation : {{car.hasNavigation == true ? "Yes" : "No"}}</p>
+      <p class="card-text">Heated seats : {{car.hasHeatedSeats == true ? "Yes" : "No"}}</p>
+    </div>
+    <div class="card-footer bg-primary">
+      <span class="input-group-addon">$</span>
+      {{car.price}}</div>
+  </div>
